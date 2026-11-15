@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clubes de leitura · Estante</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/tema.js"></script>
+    <script src="js/clubes.js"></script>
+    <script src="js/fonte.js"></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <a href="index.html" class="logo">Estante</a>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="livro.html">Catálogo</a></li>
+          <li><a href="#">Diário</a></li>
+          <li><a href="clubes.html">Clubes</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="#">Listas</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><button id="botao-tema" type="button">Modo escuro</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="destaque">
+        <h1>Clubes de leitura</h1>
+        <p>Encontre o clube mais próximo de você.</p>
+      </section>
+
+      <section aria-labelledby="titulo-busca">
+        <h2 id="titulo-busca">Buscar clubes</h2>
+        <div class="busca">
+          <label for="busca-nome">Nome ou gênero</label>
+          <input type="search" id="busca-nome" placeholder="Ex.: fantasia" />
+
+          <label for="busca-regiao">Região</label>
+          <select id="busca-regiao">
+            <option value="">Todas</option>
+            <option value="Asa Norte">Asa Norte</option>
+            <option value="Asa Sul">Asa Sul</option>
+            <option value="Taguatinga">Taguatinga</option>
+          </select>
+        </div>
+
+        <p id="resultado-contagem" role="status">3 clubes encontrados</p>
+
+        <div class="cartoes" id="lista-clubes">
+          <article class="cartao-clube" data-regiao="Asa Norte">
+            <div class="capa">IMAGEM</div>
+            <h3>Clube Entre Páginas</h3>
+            <p>Asa Norte · Fantasia</p>
+            <p>Encontros: sábados, 15h</p>
+          </article>
+
+          <article class="cartao-clube" data-regiao="Asa Sul">
+            <div class="capa">IMAGEM</div>
+            <h3>Leitores da Quadra</h3>
+            <p>Asa Sul · Clássicos</p>
+            <p>Encontros: quartas, 19h</p>
+          </article>
+
+          <article class="cartao-clube" data-regiao="Taguatinga">
+            <div class="capa">IMAGEM</div>
+            <h3>Roda de Contos</h3>
+            <p>Taguatinga · Contos e crônicas</p>
+            <p>Encontros: domingos, 10h</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>Estante · projeto acadêmico · CEUB</p>
+      <nav aria-label="Links do rodapé">
+        <a href="contato.html">Contato</a>
+        <a href="https://github.com/devxaviier">GitHub</a>
+        <a href="acessibilidade.html">Acessibilidade (WCAG)</a>
+      </nav>
+    </footer>
+  </body>
+</html>
