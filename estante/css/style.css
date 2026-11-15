@@ -102,6 +102,31 @@ button {
   cursor: pointer;
 }
 
+/* Carrossel */
+.carrossel {
+  border: 2px solid var(--borda);
+  margin-bottom: 2rem;
+}
+
+.slide {
+  display: none;
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var(--painel);
+}
+
+.slide.ativo {
+  display: block;
+}
+
+.carrossel-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-top: 2px solid var(--borda);
+}
+
 /* Rodapé */
 .rodape {
   display: flex;

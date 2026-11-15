@@ -6,6 +6,7 @@
     <title>Estante · Diário de leitura</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/tema.js"></script>
+    <script src="js/carrossel.js"></script>
   </head>
   <body>
     <header class="cabecalho">
@@ -28,6 +29,45 @@
       <section class="destaque">
         <h1>Seu diário de leitura</h1>
         <p>Registre o que você leu, avalie e descubra novos livros.</p>
+      </section>
+
+      <section
+        class="carrossel"
+        aria-roledescription="carrossel"
+        aria-label="Destaques da semana"
+      >
+        <div class="slides" aria-live="polite">
+          <article
+            class="slide ativo"
+            aria-roledescription="slide"
+            aria-label="1 de 3"
+          >
+            <h2>Lançamentos da semana</h2>
+            <p>Veja os livros mais comentados pela comunidade.</p>
+          </article>
+          <article
+            class="slide"
+            aria-roledescription="slide"
+            aria-label="2 de 3"
+          >
+            <h2>Clubes de leitura</h2>
+            <p>Encontre o clube de leitura mais próximo de você.</p>
+          </article>
+          <article
+            class="slide"
+            aria-roledescription="slide"
+            aria-label="3 de 3"
+          >
+            <h2>Listas da comunidade</h2>
+            <p>Descubra coleções montadas por outros leitores.</p>
+          </article>
+        </div>
+
+        <div class="carrossel-controles">
+          <button type="button" id="slide-anterior">‹ Anterior</button>
+          <span id="slide-contador">1 / 3</span>
+          <button type="button" id="slide-proximo">Próximo ›</button>
+        </div>
       </section>
 
       <section class="catalogo">
