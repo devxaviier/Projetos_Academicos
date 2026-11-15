@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acessibilidade · Estante</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/tema.js"></script>
+    <script src="js/fonte.js"></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <a href="index.html" class="logo">Estante</a>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="livro.html">Catálogo</a></li>
+          <li><a href="#">Diário</a></li>
+          <li><a href="clubes.html">Clubes</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="#">Listas</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><button id="botao-tema" type="button">Modo escuro</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="destaque">
+        <h1>Acessibilidade</h1>
+        <p>Ajuste o site para ler com mais conforto.</p>
+      </section>
+
+      <section aria-labelledby="titulo-fonte">
+        <h2 id="titulo-fonte">Tamanho da fonte</h2>
+        <div class="controles-fonte">
+          <button type="button" id="fonte-menos" aria-label="Diminuir fonte">
+            A−
+          </button>
+          <button type="button" id="fonte-normal" aria-label="Fonte normal">
+            A
+          </button>
+          <button type="button" id="fonte-mais" aria-label="Aumentar fonte">
+            A+
+          </button>
+        </div>
+        <p id="fonte-status" role="status"></p>
+      </section>
+
+      <section aria-labelledby="titulo-tema">
+        <h2 id="titulo-tema">Modo claro e escuro</h2>
+        <p>
+          Use o botão no menu no topo de qualquer página para alternar entre os
+          dois modos. A sua escolha fica guardada neste navegador.
+        </p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>Estante · projeto acadêmico · CEUB</p>
+      <nav aria-label="Links do rodapé">
+        <a href="contato.html">Contato</a>
+        <a href="https://github.com/devxaviier">GitHub</a>
+        <a href="acessibilidade.html">Acessibilidade (WCAG)</a>
+      </nav>
+    </footer>
+  </body>
+</html>

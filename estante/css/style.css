@@ -99,6 +99,7 @@ button {
   border: 2px solid var(--borda);
   background: var(--painel);
   color: var(--texto);
+  font: inherit;
   cursor: pointer;
 }
 
@@ -164,6 +165,13 @@ button {
   list-style: none;
   margin: 0 0 2rem;
   padding: 0;
+}
+
+/* Acessibilidade */
+.controles-fonte {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Rodapé */
