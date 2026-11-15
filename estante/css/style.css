@@ -127,6 +127,45 @@ button {
   border-top: 2px solid var(--borda);
 }
 
+/* Perfil */
+.perfil-topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 2px solid var(--borda);
+  background: var(--painel);
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--borda);
+  border-radius: 50%;
+  background: var(--fundo);
+}
+
+.estatisticas {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.historico {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
 /* Rodapé */
 .rodape {
   display: flex;
