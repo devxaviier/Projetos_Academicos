@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222222;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #777777;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteúdo */
+main {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.destaque {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #e6e6e6;
+  border: 2px solid #777777;
+  margin-bottom: 2rem;
+}
+
+/* Cartões */
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cartao-livro,
+.cartao-info {
+  border: 2px solid #777777;
+  padding: 1rem;
+}
+
+.capa {
+  height: 180px;
+  background: #e6e6e6;
+  border: 2px solid #777777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  border: 2px solid #777777;
+  background: #e6e6e6;
+  cursor: pointer;
+}
+
+/* Rodapé */
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: #e6e6e6;
+  border-top: 2px solid #777777;
+}
+
+.rodape nav {
+  display: flex;
+  gap: 1rem;
+}
