@@ -1,3 +1,18 @@
+:root {
+  --texto: #222222;
+  --fundo: #ffffff;
+  --borda: #777777;
+  --painel: #e6e6e6;
+}
+
+:root[data-tema="escuro"] {
+  --texto: #eeeeee;
+  --fundo: #121212;
+  --borda: #999999;
+  --painel: #1e1e1e;
+  color-scheme: dark;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,8 +21,8 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  color: #222222;
-  background: #ffffff;
+  color: var(--texto);
+  background: var(--fundo);
 }
 
 a {
@@ -22,7 +37,7 @@ a {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem 2rem;
-  border-bottom: 2px solid #777777;
+  border-bottom: 2px solid var(--borda);
 }
 
 .logo {
@@ -50,8 +65,8 @@ main {
 .destaque {
   text-align: center;
   padding: 3rem 1rem;
-  background: #e6e6e6;
-  border: 2px solid #777777;
+  background: var(--painel);
+  border: 2px solid var(--borda);
   margin-bottom: 2rem;
 }
 
@@ -65,14 +80,14 @@ main {
 
 .cartao-livro,
 .cartao-info {
-  border: 2px solid #777777;
+  border: 2px solid var(--borda);
   padding: 1rem;
 }
 
 .capa {
   height: 180px;
-  background: #e6e6e6;
-  border: 2px solid #777777;
+  background: var(--painel);
+  border: 2px solid var(--borda);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,8 +96,9 @@ main {
 
 button {
   padding: 0.4rem 1rem;
-  border: 2px solid #777777;
-  background: #e6e6e6;
+  border: 2px solid var(--borda);
+  background: var(--painel);
+  color: var(--texto);
   cursor: pointer;
 }
 
@@ -93,8 +109,8 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1.5rem 2rem;
-  background: #e6e6e6;
-  border-top: 2px solid #777777;
+  background: var(--painel);
+  border-top: 2px solid var(--borda);
 }
 
 .rodape nav {
@@ -121,8 +137,8 @@ button {
 }
 
 .sinopse {
-  background: #e6e6e6;
-  border: 2px solid #777777;
+  background: var(--painel);
+  border: 2px solid var(--borda);
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -143,7 +159,9 @@ button {
 .formulario input,
 .formulario textarea {
   padding: 0.5rem;
-  border: 2px solid #777777;
+  border: 2px solid var(--borda);
+  background: var(--fundo);
+  color: var(--texto);
   font: inherit;
 }
 
