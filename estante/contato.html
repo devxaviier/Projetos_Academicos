@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato · Estante</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <a href="index.html" class="logo">Estante</a>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="livro.html">Catálogo</a></li>
+          <li><a href="#">Diário</a></li>
+          <li><a href="#">Clubes</a></li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Listas</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contato-layout">
+        <section>
+          <h1>Contato</h1>
+          <form class="formulario" action="#" method="post">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required />
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="6"
+              required
+            ></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+
+        <aside>
+          <article class="cartao-info">
+            <h2>Sobre o projeto</h2>
+            <p>Diário de leitura criado como trabalho acadêmico.</p>
+          </article>
+          <article class="cartao-info">
+            <h2>Onde me encontrar</h2>
+            <p>
+              <a href="https://github.com/devxaviier">GitHub</a> ·
+              <a href="#">LinkedIn</a> ·
+              <a href="mailto:theo.xavier@sempreceub.com">E-mail</a>
+            </p>
+          </article>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <p>Estante · projeto acadêmico · CEUB</p>
+      <nav aria-label="Links do rodapé">
+        <a href="contato.html">Contato</a>
+        <a href="https://github.com/devxaviier">GitHub</a>
+        <a href="#">Acessibilidade (WCAG)</a>
+      </nav>
+    </footer>
+  </body>
+</html>
