@@ -1,6 +1,8 @@
-# Projetos Acadêmicos
+# Projetos Acadêmicos | CEUB
 
-Repositório que reúne os projetos desenvolvidos ao longo da graduação em **Engenharia de Software** no **Centro Universitário de Brasília (CEUB)**. Cada projeto possui documentação própria, com contexto, requisitos, tecnologias e instruções de execução.
+Repositório que reúne os projetos desenvolvidos ao longo da graduação em **Engenharia de Software** no **Centro Universitário de Brasília (CEUB)**.
+
+Cada projeto possui documentação própria, contemplando contexto, requisitos, tecnologias utilizadas e instruções de execução.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Curso](https://img.shields.io/badge/curso-Engenharia%20de%20Software-blue)
@@ -8,68 +10,53 @@ Repositório que reúne os projetos desenvolvidos ao longo da graduação em **E
 
 ---
 
-## Sumário
+## 📑 Sumário
 
 - [Sobre o repositório](#sobre-o-repositório)
 - [Projetos](#projetos)
 - [Estrutura do repositório](#estrutura-do-repositório)
-- [Tecnologias e competências](#tecnologias-e-competências)
-- [Organização e boas práticas](#organização-e-boas-práticas)
 - [Autor](#autor)
 
 ---
 
-## Sobre o repositório
+## Sobre o repositório:
 
-O objetivo deste repositório é centralizar e documentar os trabalhos acadêmicos, registrando a evolução técnica ao longo do curso. Os projetos abrangem levantamento de requisitos, prototipação, modelagem de dados e desenvolvimento de software.
+O objetivo deste repositório é centralizar e documentar os trabalhos acadêmicos, registrando a evolução técnica ao longo do curso.
 
-## Projetos
+Os projetos abrangem diferentes etapas do desenvolvimento de software, incluindo:
 
-| Projeto | Descrição | Áreas envolvidas | Status |
-|---|---|---|---|
-| [Site](./projeto-final-DI) | Ainda sem Tema | Prototipação (), Modelagem de dados () | Em andamento |
-
-## Estrutura do repositório
-
-```text
-projetos-academicos/
-├── README.md                # Visão geral e índice dos projetos
-├── projeto-final-DI/
-    └── README.md
-
-```
-
-Cada pasta de projeto contém um `README.md` com:
-
-1. Descrição e objetivo do projeto
-2. Tecnologias utilizadas
-3. Instruções de instalação e execução
-4. Documentação complementar (diagramas, protótipos e capturas de tela)
-
-## Tecnologias e competências
-
-| Categoria | Itens |
-|---|---|
-| Versionamento | Git, GitHub |
-| Linguagens |  |
-| Design e prototipação |  |
-| Modelagem | Diagrama Entidade-Relacionamento () |
-| Documentação | Markdown |
-
-## Organização e boas práticas
-
-- Um diretório por projeto, nomeado em minúsculas e separado por hífens.
-- Documentação mantida junto ao código de cada projeto.
-- Histórico de commits com mensagens claras e objetivas.
-
-## Autor
-
-**Theo Xavier**
-Estudante de Engenharia de Software · CEUB
-
-[![GitHub](https://img.shields.io/badge/GitHub-devxaviier-181717?logo=github)](https://github.com/devxaviier)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-adicione%20seu%20perfil-0A66C2?logo=linkedin)](https://www.linkedin.com/)
+- Levantamento e análise de requisitos;
+- Prototipação de interfaces;
+- Modelagem de dados;
+- Desenvolvimento de aplicações;
+- Documentação técnica.
 
 ---
 
-Este repositório tem finalidade exclusivamente acadêmica e está em constante atualização.
+## Projetos
+
+| Projeto | Descrição | Áreas envolvidas | Deploy | Status |
+|---|---|---|---|---|
+| [Estante](./estante) | Plataforma web literária com catálogo de livros, clubes de leitura, perfil de usuário e recursos de acessibilidade. | Desenvolvimento Web, Front-end e Acessibilidade | [Acessar site](https://devxaviier.github.io/Projetos_Academicos/estante/) | Em andamento |
+
+---
+
+## 📂 Estrutura do repositório
+
+```text
+Projetos_Academicos/
+├── estante/
+└── README.md
+```
+
+---
+
+## Autor
+
+**Theo Xavier -Estudante de Engenharia de Software — CEUB**
+
+Repositório destinado ao registro e à apresentação dos projetos desenvolvidos durante a graduação.
+
+---
+
+*Este repositório está em constante evolução, acompanhando meu aprendizado e desenvolvimento profissional.*
