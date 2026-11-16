@@ -3,6 +3,7 @@
   --fundo: #ffffff;
   --borda: #777777;
   --painel: #e6e6e6;
+  --erro: #b00020;
 }
 
 :root[data-tema="escuro"] {
@@ -10,6 +11,7 @@
   --fundo: #121212;
   --borda: #999999;
   --painel: #1e1e1e;
+  --erro: #ff8a80;
   color-scheme: dark;
 }
 
@@ -276,6 +278,31 @@ button {
 
 .contato-layout aside .cartao-info {
   margin-bottom: 1rem;
+}
+
+/* Login */
+.login-card {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 2px solid var(--borda);
+  background: var(--painel);
+}
+
+.login-card h1 {
+  margin-top: 0;
+}
+
+.formulario .erro {
+  min-height: 1.25rem;
+  color: var(--erro);
+  font-size: 0.9rem;
+}
+
+.formulario input:focus-visible,
+.formulario button:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 2px;
 }
 
 /* Telas pequenas */
