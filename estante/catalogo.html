@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo · Estante</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/tema.js"></script>
+    <script src="js/fonte.js"></script>
+    <script src="js/usuario.js"></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <a href="index.html" class="logo">Estante</a>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="#">Diário</a></li>
+          <li><a href="clubes.html">Clubes</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="#">Listas</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html">Entrar</a></li>
+          <li><button id="botao-tema" type="button">Modo escuro</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Catálogo</h1>
+
+      <div class="busca">
+        <label for="busca-livro">Buscar por título ou autor</label>
+        <label for="filtro-genero">Gênero</label>
+        <input type="search" id="busca-livro" placeholder="Ex.: Machado" />
+        <select id="filtro-genero">
+          <option value="todos">Todos</option>
+          <option value="Romance">Romance</option>
+          <option value="Ficção científica">Ficção científica</option>
+          <option value="Fantasia">Fantasia</option>
+          <option value="Não ficção">Não ficção</option>
+        </select>
+      </div>
+
+      <p id="contador" aria-live="polite"></p>
+
+      <div class="cartoes">
+        <article
+          class="cartao-livro"
+          data-titulo="Dom Casmurro"
+          data-autor="Machado de Assis"
+          data-genero="Romance"
+        >
+          <div class="capa">CAPA</div>
+          <h3>Dom Casmurro</h3>
+          <p>Machado de Assis · Romance</p>
+          <a href="livro.html">Ver livro</a>
+        </article>
+
+        <article
+          class="cartao-livro"
+          data-titulo="O Cortiço"
+          data-autor="Aluísio Azevedo"
+          data-genero="Romance"
+        >
+          <div class="capa">CAPA</div>
+          <h3>O Cortiço</h3>
+          <p>Aluísio Azevedo · Romance</p>
+          <a href="livro.html">Ver livro</a>
+        </article>
+
+        <article
+          class="cartao-livro"
+          data-titulo="Orgulho e Preconceito"
+          data-autor="Jane Austen"
+          data-genero="Romance"
+        >
+          <div class="capa">CAPA</div>
+          <h3>Orgulho e Preconceito</h3>
+          <p>Jane Austen · Romance</p>
+          <a href="livro.html">Ver livro</a>
+        </article>
+
+        <article
+          class="cartao-livro"
+          data-titulo="1984"
+          data-autor="George Orwell"
+          data-genero="Ficção científica"
+        >
+          <div class="capa">CAPA</div>
+          <h3>1984</h3>
+          <p>George Orwell · Ficção científica</p>
+          <a href="livro.html">Ver livro</a>
+        </article>
+
+        <article
+          class="cartao-livro"
+          data-titulo="Duna"
+          data-autor="Frank Herbert"
+          data-genero="Ficção científica"
+        >
+          <div class="capa">CAPA</div>
+          <h3>Duna</h3>
+          <p>Frank Herbert · Ficção científica</p>
+          <a href="livro.html">Ver livro</a>
+        </article>
+
+        <article
+          class="cartao-livro"
+          data-titulo="O Hobbit"
+          data-autor="J. R. R. Tolkien"
+          data-genero="Fantasia"
+        >
+          <div class="capa">CAPA</div>
+          <h3>O Hobbit</h3>
+          <p>J. R. R. Tolkien · Fantasia</p>
+          <a href="livro.html">Ver livro</a>
+        </article>
+
+        <article
+          class="cartao-livro"
+          data-titulo="Sapiens"
+          data-autor="Yuval Noah Harari"
+          data-genero="Não ficção"
+        >
+          <div class="capa">CAPA</div>
+          <h3>Sapiens</h3>
+          <p>Yuval Noah Harari · Não ficção</p>
+          <a href="livro.html">Ver livro</a>
+        </article>
+      </div>
+
+      <p id="aviso-vazio" hidden>
+        Nenhum livro encontrado. Tente outro termo ou gênero.
+      </p>
+    </main>
+
+    <footer class="rodape">
+      <p>Estante · projeto acadêmico · CEUB</p>
+      <nav aria-label="Links do rodapé">
+        <a href="contato.html">Contato</a>
+        <a href="https://github.com/devxaviier">GitHub</a>
+        <a href="acessibilidade.html">Acessibilidade (WCAG)</a>
+      </nav>
+    </footer>
+
+    <script src="js/catalogo.js"></script>
+  </body>
+</html>
