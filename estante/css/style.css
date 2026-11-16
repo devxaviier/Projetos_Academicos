@@ -315,6 +315,23 @@ button {
   margin-top: 0.25rem;
 }
 
+/* Mensagem de sucesso do contato */
+.formulario .sucesso {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--borda);
+  background: var(--painel);
+}
+
+.formulario .sucesso:empty {
+  display: none;
+}
+
+.formulario textarea:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 2px;
+}
+
 /* Telas pequenas */
 @media (max-width: 700px) {
   .livro-detalhe,
