@@ -56,6 +56,127 @@
           dois modos. A sua escolha fica guardada neste navegador.
         </p>
       </section>
+
+      <section aria-labelledby="titulo-contraste">
+        <h2 id="titulo-contraste">Análise de contraste (WCAG 2.1 AA)</h2>
+        <p>
+          O nível AA exige razão mínima de 4,5:1 para texto normal e 3:1 para
+          texto grande e componentes de interface.
+        </p>
+        <div class="tabela-wrapper">
+          <table>
+            <caption>
+              Contraste entre texto e fundo nos dois modos
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Uso</th>
+                <th scope="col">Texto</th>
+                <th scope="col">Fundo</th>
+                <th scope="col">Razão</th>
+                <th scope="col">Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Texto principal (claro)</td>
+                <td>#222222</td>
+                <td>#ffffff</td>
+                <td>15,9:1</td>
+                <td>Passa AA</td>
+              </tr>
+              <tr>
+                <td>Texto sobre painéis, botões e rodapé (claro)</td>
+                <td>#222222</td>
+                <td>#e6e6e6</td>
+                <td>12,7:1</td>
+                <td>Passa AA</td>
+              </tr>
+              <tr>
+                <td>Bordas (claro)</td>
+                <td>#777777</td>
+                <td>#ffffff</td>
+                <td>4,5:1</td>
+                <td>Passa AA (mín. 3:1 para componentes)</td>
+              </tr>
+              <tr>
+                <td>Bordas sobre painéis (claro)</td>
+                <td>#777777</td>
+                <td>#e6e6e6</td>
+                <td>3,6:1</td>
+                <td>Passa AA (mín. 3:1 para componentes)</td>
+              </tr>
+              <tr>
+                <td>Mensagem de erro no contato (claro)</td>
+                <td>#b00020</td>
+                <td>#ffffff</td>
+                <td>7,3:1</td>
+                <td>Passa AA</td>
+              </tr>
+              <tr>
+                <td>Mensagem de erro no login (claro)</td>
+                <td>#b00020</td>
+                <td>#e6e6e6</td>
+                <td>5,9:1</td>
+                <td>Passa AA</td>
+              </tr>
+              <tr>
+                <td>Texto principal (escuro)</td>
+                <td>#eeeeee</td>
+                <td>#121212</td>
+                <td>16,1:1</td>
+                <td>Passa AA</td>
+              </tr>
+              <tr>
+                <td>Texto sobre painéis, botões e rodapé (escuro)</td>
+                <td>#eeeeee</td>
+                <td>#1e1e1e</td>
+                <td>14,4:1</td>
+                <td>Passa AA</td>
+              </tr>
+              <tr>
+                <td>Bordas (escuro)</td>
+                <td>#999999</td>
+                <td>#121212</td>
+                <td>6,6:1</td>
+                <td>Passa AA (mín. 3:1 para componentes)</td>
+              </tr>
+              <tr>
+                <td>Bordas sobre painéis (escuro)</td>
+                <td>#999999</td>
+                <td>#1e1e1e</td>
+                <td>5,9:1</td>
+                <td>Passa AA (mín. 3:1 para componentes)</td>
+              </tr>
+              <tr>
+                <td>Mensagem de erro no contato (escuro)</td>
+                <td>#ff8a80</td>
+                <td>#121212</td>
+                <td>8,2:1</td>
+                <td>Passa AA</td>
+              </tr>
+              <tr>
+                <td>Mensagem de erro no login (escuro)</td>
+                <td>#ff8a80</td>
+                <td>#1e1e1e</td>
+                <td>7,3:1</td>
+                <td>Passa AA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="titulo-praticas">
+        <h2 id="titulo-praticas">O que foi aplicado</h2>
+        <ul>
+          <li>Texto alternativo (<code>alt</code>) nas imagens</li>
+          <li>Navegação por teclado, com foco visível</li>
+          <li>Títulos em ordem hierárquica (h1, h2, h3)</li>
+          <li>Rótulos (<code>label</code>) nos campos de formulário</li>
+          <li>Modo claro/escuro e fonte ajustável, com a escolha salva</li>
+        </ul>
+      </section>
     </main>
 
     <footer class="rodape">

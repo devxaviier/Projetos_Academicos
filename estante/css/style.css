@@ -339,3 +339,23 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Página de acessibilidade: tabela de contraste ===== */
+.tabela-wrapper {
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid currentColor;
+  padding: 0.5rem;
+  text-align: left;
+}
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}

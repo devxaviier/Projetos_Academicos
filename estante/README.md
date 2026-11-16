@@ -11,7 +11,7 @@ Desenvolvimento de Interfaces (CEUB, 2/2026).
 | v2.0   | Em planejamento | Carrossel, abas de pesquisa, formulário, modo claro/escuro |
 | v3.0   | Em planejamento | Login, aba de acessibilidade, WCAG e contraste             |
 
-## v1.0: Estrutura
+## Versão 1 (v1.0)
 
 ### O que foi feito
 
@@ -48,7 +48,7 @@ Abra a pasta `estante` no VS Code e use a extensão Live Server no `index.html`.
 
 ![Página de contato da v1, com formulário e cartões laterais](img/v1_contato.png)
 
-## ## v2.0: Estrutura
+## Versão 2 (v2.0)
 
 Segunda versão do Estante. Na v1 existiam as páginas Início, Livro e Contato; na v2 o site ganha novas páginas e recursos de acessibilidade.
 
@@ -88,3 +88,36 @@ Segunda versão do Estante. Na v1 existiam as páginas Início, Livro e Contato;
 ### Ferramentas
 
 VS Code, Git e GitHub. Claude (IA) foi usado como apoio na escrita do código (CSS e JavaScript).
+
+## Versão 3 (v3.0)
+
+### O que mudou
+
+- Login simulado (sem back-end), com o e-mail salvo no navegador
+- Catálogo com busca por título/autor e filtro por gênero
+- Validação do formulário de contato, com mensagem de sucesso
+- Página de acessibilidade com análise de contraste (WCAG 2.1 AA)
+
+### Como testar
+
+Abra `index.html` no navegador. Para o login, use qualquer e-mail válido.
+
+### Prints
+
+### Página Login
+
+![Página Login](img/v3_login.png)
+
+### Página Catálogo
+
+![Catálogo](img/v3_catalogo.png)
+![Catálogo](img/v3_catalogo_filtro.png)
+
+### Página Contato
+
+![Contato](img/v3_contato.png)
+
+### Página Acessibilidade
+
+![Acessibilidade](img/v3_acessibilidade.png)
+![Acessibilidade](img/v3_acessibilidade_wcag.png)
