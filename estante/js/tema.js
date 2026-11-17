@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const botao = document.getElementById("botao-tema");
 
   function atualizarTexto() {
-    botao.textContent = tema === "escuro" ? "☀️ Modo claro" : "🌙 Modo escuro";
+    botao.textContent = tema === "escuro" ? "☼︎ Modo claro" : "☾ Modo escuro";
   }
 
   botao.addEventListener("click", () => {

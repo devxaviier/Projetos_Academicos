@@ -3,131 +3,224 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estante · Diário de leitura</title>
+    <title>Estante · Seu espaço de leitura</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Courier New, Courier, monospace' font-weight='bold' font-size='88' fill='white'>E</text></svg>"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/carrossel.js"></script>
-    <script src="js/tema.js"></script>
-    <script src="js/fonte.js"></script>
-    <script src="js/usuario.js"></script>
+    <script src="js/carrossel.js" defer></script>
+    <script src="js/tema.js" defer></script>
+    <script src="js/fonte.js" defer></script>
+    <script src="js/usuario.js" defer></script>
   </head>
+
   <body>
     <!-- parte do cabeçalho com logo e menu de navegação. -->
     <header class="cabecalho">
       <a href="index.html" class="logo">Estante</a>
+
       <nav aria-label="Navegação principal">
         <ul class="menu">
-          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html" aria-current="page">Início</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
           <li><a href="clubes.html">Clubes</a></li>
           <li><a href="perfil.html">Perfil</a></li>
           <li><a href="#">Listas</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html" aria-current="page">Entrar</a></li>
+          <li><a href="login.html">Entrar</a></li>
           <li><button id="botao-tema" type="button">Modo escuro</button></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="destaque">
-        <h1>Seu diário de leitura</h1>
-        <p>Registre o que você leu, avalie e descubra novos livros.</p>
-      </section>
+    <!-- conteúdo principal da página -->
+    <main class="pagina-inicial">
+      <section class="inicio-hero">
+        <div class="inicio-texto">
+          <span class="inicio-etiqueta">SEU ESPAÇO DE LEITURA</span>
+          <h1>Histórias que merecem um lugar na sua estante.</h1>
+          <p>
+            Descubra livros, organize suas leituras e compartilhe suas
+            experiências com outros leitores.
+          </p>
 
-      <!-- sessão do carrossel de destaques, com três slides que mostram
-      informações sobre lançamentos, clubes de leitura e listas da comunidade. -->
-      <section
-        class="carrossel"
-        aria-roledescription="carrossel"
-        aria-label="Destaques da semana"
-      >
-        <div class="slides" aria-live="polite">
-          <article
-            class="slide ativo"
-            aria-roledescription="slide"
-            aria-label="1 de 3"
-          >
-            <h2>Lançamentos da semana</h2>
-            <p>Veja os livros mais comentados pela comunidade.</p>
-          </article>
-          <article
-            class="slide"
-            aria-roledescription="slide"
-            aria-label="2 de 3"
-          >
-            <h2>Clubes de leitura</h2>
-            <p>Encontre o clube de leitura mais próximo de você.</p>
-          </article>
-          <article
-            class="slide"
-            aria-roledescription="slide"
-            aria-label="3 de 3"
-          >
-            <h2>Listas da comunidade</h2>
-            <p>Descubra coleções montadas por outros leitores.</p>
-          </article>
+          <!-- botões de ação para explorar o catálogo ou acessar a biblioteca do usuário. -->
+          <div class="inicio-acoes">
+            <a class="botao-destaque" href="catalogo.html">
+              Explorar catálogo
+            </a>
+            <a class="link-secundario" href="perfil.html">
+              Minha biblioteca →
+            </a>
+          </div>
         </div>
 
-        <!-- div que contém os botões de controle do carrossel, com botões para ir
-        para o slide anterior e próximo, e um contador de slides. -->
-        <div class="carrossel-controles">
-          <button type="button" id="slide-anterior">‹ Anterior</button>
-          <span id="slide-contador">1 / 3</span>
-          <button type="button" id="slide-proximo">Próximo ›</button>
+        <!-- imagem ilustrativa de livros empilhados, representando a diversidade de leituras. -->
+        <aside class="inicio-painel">
+          <span class="painel-legenda">UM LIVRO, UMA NOVA JORNADA</span>
+          <h2>Qual será sua próxima leitura?</h2>
+          <p>
+            Encontre sua próxima história favorita e acompanhe sua jornada
+            literária.
+          </p>
+          <a href="catalogo.html">Descobrir livros →</a>
+        </aside>
+      </section>
+
+      <!-- seção de destaques da comunidade, com carrossel de informações sobre lançamentos, clubes e listas. -->
+      <section class="secao-carrossel" aria-labelledby="titulo-destaques">
+        <div class="secao-cabecalho">
+          <div>
+            <span class="secao-etiqueta">FIQUE POR DENTRO</span>
+            <h2 id="titulo-destaques">Destaques da comunidade</h2>
+          </div>
+        </div>
+
+        <!-- carrossel de destaques, com três slides contendo informações sobre lançamentos, clubes e listas. -->
+        <section
+          class="carrossel"
+          aria-roledescription="carrossel"
+          aria-label="Destaques da semana"
+        >
+          <!-- div que contém os slides do carrossel, com atributos de acessibilidade para indicar o estado atual. -->
+          <div class="slides" aria-live="polite">
+            <article
+              class="slide ativo"
+              aria-roledescription="slide"
+              aria-label="1 de 3"
+            >
+              <span class="slide-numero">01 / 03</span>
+              <h2>Lançamentos da semana</h2>
+              <p>Veja os livros mais comentados pela comunidade.</p>
+              <a href="catalogo.html">Explorar lançamentos →</a>
+            </article>
+
+            <article
+              class="slide"
+              aria-roledescription="slide"
+              aria-label="2 de 3"
+            >
+              <span class="slide-numero">02 / 03</span>
+              <h2>Clubes de leitura</h2>
+              <p>Encontre leitores com interesses parecidos com os seus.</p>
+              <a href="clubes.html">Conhecer clubes →</a>
+            </article>
+
+            <article
+              class="slide"
+              aria-roledescription="slide"
+              aria-label="3 de 3"
+            >
+              <span class="slide-numero">03 / 03</span>
+              <h2>Listas da comunidade</h2>
+              <p>Descubra seleções de livros feitas por outros leitores.</p>
+              <a href="#">Ver listas →</a>
+            </article>
+          </div>
+
+          <!-- controles do carrossel, com botões para navegar entre os slides e um contador de slides. -->
+          <div class="carrossel-controles">
+            <button type="button" id="slide-anterior">‹ Anterior</button>
+            <span id="slide-contador">1 / 3</span>
+            <button type="button" id="slide-proximo">Próximo ›</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- seção de livros em destaque, com cartões de livros contendo capa, título, autor e avaliação. -->
+      <section class="secao-livros" aria-labelledby="titulo-livros">
+        <div class="secao-cabecalho">
+          <div>
+            <span class="secao-etiqueta">PARA SUA PRÓXIMA LEITURA</span>
+            <h2 id="titulo-livros">Livros em destaque</h2>
+          </div>
+          <a class="link-secundario" href="catalogo.html">
+            Ver catálogo completo →
+          </a>
+        </div>
+
+        <!-- div que contém quatro cartões de livros, cada um com capa, título, autor e avaliação. -->
+        <div class="cartoes cartoes-livros">
+          <article class="cartao-livro">
+            <div class="capa">CAPA</div>
+            <div class="livro-informacoes">
+              <h3>Título do livro</h3>
+              <p>Nome do autor</p>
+              <span class="livro-avaliacao">★★★★☆</span>
+            </div>
+          </article>
+          <article class="cartao-livro">
+            <div class="capa">CAPA</div>
+            <div class="livro-informacoes">
+              <h3>Título do livro</h3>
+              <p>Nome do autor</p>
+              <span class="livro-avaliacao">★★★★☆</span>
+            </div>
+          </article>
+
+          <!-- teste da capa com imagem-->
+          <!--
+          <article class="cartao-livro">
+            <div class="capa">
+              <img
+                src="img/teste_capa.png"
+                alt="Capa do livro Título do livro"
+              />
+            </div>
+            <div class="livro-informacoes">
+              <h3>Título do livro</h3>
+              <p>Nome do autor</p>
+              <span class="livro-avaliacao">★★★★☆</span>
+            </div>
+          </article>
+        -->
+
+          <article class="cartao-livro">
+            <div class="capa">CAPA</div>
+            <div class="livro-informacoes">
+              <h3>Título do livro</h3>
+              <p>Nome do autor</p>
+              <span class="livro-avaliacao">★★★★☆</span>
+            </div>
+          </article>
+
+          <article class="cartao-livro">
+            <div class="capa">CAPA</div>
+            <div class="livro-informacoes">
+              <h3>Título do livro</h3>
+              <p>Nome do autor</p>
+              <span class="livro-avaliacao">★★★★☆</span>
+            </div>
+          </article>
         </div>
       </section>
 
-      <!-- sessão de livros em destaque, com quatro cartões que mostram capa,
-      título, autor, avaliação e botão para marcar como lido. -->
-      <section class="catalogo">
-        <h2>Livros em destaque</h2>
-        <div class="cartoes">
-          <article class="cartao-livro">
-            <div class="capa">CAPA</div>
-            <h3>Título do livro</h3>
-            <p>Autor · ★★★★☆</p>
-            <button type="button">Lido</button>
-          </article>
-
-          <article class="cartao-livro">
-            <div class="capa">CAPA</div>
-            <h3>Título do livro</h3>
-            <p>Autor · ★★★★☆</p>
-            <button type="button">Lido</button>
-          </article>
-
-          <article class="cartao-livro">
-            <div class="capa">CAPA</div>
-            <h3>Título do livro</h3>
-            <p>Autor · ★★★★☆</p>
-            <button type="button">Lido</button>
-          </article>
-
-          <article class="cartao-livro">
-            <div class="capa">CAPA</div>
-            <h3>Título do livro</h3>
-            <p>Autor · ★★★★☆</p>
-            <button type="button">Lido</button>
-          </article>
+      <!-- seção explicativa sobre como funciona a plataforma, com três passos ilustrados. -->
+      <section class="secao-como-funciona">
+        <div>
+          <span class="secao-etiqueta">SIMPLES ASSIM</span>
+          <h2>Sua leitura, do seu jeito.</h2>
         </div>
-      </section>
 
-      <!-- sessão explicativa sobre como funciona o site, com três cartões que
-      mostram os passos para marcar livros, avaliar e registrar leituras. -->
-      <section class="explicativos">
-        <h2>Como funciona</h2>
-        <div class="cartoes">
-          <article class="cartao-info">
-            <h3>1. Marque</h3>
-            <p>Adicione livros à estante como quero ler, lendo ou lido.</p>
+        <div class="passos-leitura">
+          <article class="passo-leitura">
+            <span>01</span>
+            <h3>Organize</h3>
+            <p>Reúna seus livros e acompanhe o que deseja ler.</p>
           </article>
-          <article class="cartao-info">
-            <h3>2. Avalie</h3>
-            <p>Dê de meia a cinco estrelas e escreva uma resenha curta.</p>
+
+          <article class="passo-leitura">
+            <span>02</span>
+            <h3>Avalie</h3>
+            <p>Registre suas opiniões e compartilhe suas resenhas.</p>
           </article>
-          <article class="cartao-info">
-            <h3>3. Registre</h3>
-            <p>Anote no diário a data em que terminou cada leitura.</p>
+
+          <article class="passo-leitura">
+            <span>03</span>
+            <h3>Compartilhe</h3>
+            <p>Conheça clubes e descubra novas recomendações.</p>
           </article>
         </div>
       </section>

@@ -235,6 +235,19 @@ button:hover {
   border-radius: 3px 8px 8px 3px;
 }
 
+.capa-grande {
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+}
+
+.capa-grande img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Carrossel */
 .carrossel {
   border: 1px solid var(--borda);
@@ -513,4 +526,934 @@ caption {
   text-align: left;
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+/* ===== Estante v4.0 — layout da página inicial ===== */
+
+/* Cabeçalho */
+.cabecalho {
+  padding: 0.8rem 3%;
+  gap: 1.5rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+.menu {
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+}
+
+.menu a {
+  padding: 0.4rem 0;
+}
+
+/* Área principal */
+main {
+  max-width: 1500px;
+  padding: 2rem 3%;
+}
+
+/* Banner principal */
+.destaque {
+  display: flex;
+  align-items: center;
+  min-height: 270px;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  background: linear-gradient(110deg, var(--painel), var(--fundo));
+  border: 1px solid var(--borda);
+}
+
+.destaque-conteudo {
+  max-width: 570px;
+}
+
+.destaque h1 {
+  max-width: 550px;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.destaque p {
+  margin-bottom: 1.5rem;
+}
+
+.destaque-etiqueta,
+.slide-etiqueta {
+  font-family: var(--fonte-texto);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.botao-link {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: 2px solid var(--acento);
+  border-radius: 999px;
+  background: var(--acento);
+  color: var(--fundo);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.botao-link:hover {
+  background: var(--hover-bg);
+  border-color: var(--hover-bg);
+  color: var(--hover-texto);
+}
+
+/* Carrossel */
+.carrossel {
+  margin-bottom: 2.5rem;
+  background: var(--painel);
+}
+
+.slide {
+  min-height: 190px;
+  padding: 2rem 2.5rem;
+  text-align: left;
+}
+
+.slide h2 {
+  margin: 0.4rem 0;
+}
+
+.slide p {
+  margin-bottom: 0.8rem;
+}
+
+.slide a {
+  font-weight: 600;
+}
+
+.carrossel-controles {
+  gap: 1rem;
+}
+
+.carrossel-controles button {
+  padding: 0.4rem 1rem;
+}
+
+/* Cabeçalho das seções */
+.secao-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.secao-cabecalho h2,
+.explicativos > h2 {
+  margin: 0 0 1rem;
+}
+
+.secao-cabecalho > a {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Livros em destaque */
+.cartoes-livros {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cartoes-livros .cartao-livro {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+
+.cartoes-livros .capa {
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  padding: 0.5rem;
+  overflow-wrap: anywhere;
+  font-size: 0.85rem;
+}
+
+.livro-informacoes {
+  min-width: 0;
+}
+
+.livro-informacoes h3 {
+  margin: 0.2rem 0 0.4rem;
+}
+
+.livro-informacoes p {
+  margin: 0.3rem 0;
+  overflow-wrap: anywhere;
+}
+
+.livro-informacoes .avaliacao {
+  margin-top: 0.7rem;
+  font-weight: 600;
+}
+
+.livro-informacoes a {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+/* Acesso rápido */
+.cartoes-acesso {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cartoes-acesso .cartao-info {
+  padding: 1.4rem;
+}
+
+.cartoes-acesso .cartao-info h3 {
+  margin-top: 0;
+}
+
+.cartoes-acesso .cartao-info p {
+  margin-bottom: 1rem;
+}
+
+.cartoes-acesso .cartao-info a {
+  font-weight: 600;
+}
+
+/* Rodapé */
+.rodape {
+  align-items: center;
+  padding: 1.5rem 3%;
+  margin-top: 1rem;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+.rodape nav {
+  flex-wrap: wrap;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+  .cartoes-livros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .cabecalho {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .cabecalho nav {
+    width: 100%;
+  }
+
+  .menu {
+    justify-content: center;
+    gap: 0.5rem 1rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  .destaque {
+    min-height: auto;
+    padding: 2rem 1.3rem;
+  }
+
+  .slide {
+    padding: 2rem 1.3rem;
+  }
+
+  .cartoes-livros,
+  .cartoes-acesso {
+    grid-template-columns: 1fr;
+  }
+
+  .cartoes-livros .cartao-livro {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+
+  .secao-cabecalho {
+    align-items: flex-start;
+  }
+
+  .rodape {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========================================
+   ESTANTE v4.0 — Página inicial
+   Mantém a paleta e as fontes originais
+======================================== */
+
+.pagina-inicial {
+  max-width: 1160px;
+}
+
+/* Apresentação principal */
+
+.inicio-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 3.5rem 0 4rem;
+}
+
+.inicio-etiqueta,
+.secao-etiqueta,
+.painel-legenda {
+  display: inline-block;
+  color: var(--acento);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.inicio-texto h1 {
+  max-width: 650px;
+  margin: 1rem 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.inicio-texto > p {
+  max-width: 520px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.inicio-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.botao-destaque {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid var(--acento);
+  border-radius: 999px;
+  background: var(--acento);
+  color: var(--fundo);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.botao-destaque:hover {
+  background: var(--hover-bg);
+  border-color: var(--hover-bg);
+  color: var(--hover-texto);
+}
+
+.link-secundario {
+  color: var(--acento);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-secundario:hover {
+  text-decoration: underline;
+}
+
+/* Painel lateral */
+
+.inicio-painel {
+  padding: 2rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: var(--painel);
+}
+
+.inicio-painel h2 {
+  margin: 1rem 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+.inicio-painel p {
+  margin-bottom: 1.5rem;
+}
+
+.inicio-painel a,
+.slide a {
+  color: var(--acento);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inicio-painel a:hover,
+.slide a:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalhos das seções */
+
+.secao-carrossel,
+.secao-livros {
+  margin-top: 2rem;
+}
+
+.secao-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.secao-cabecalho h2,
+.secao-como-funciona h2 {
+  margin: 0.5rem 0 0;
+}
+
+.secao-etiqueta {
+  opacity: 0.85;
+}
+
+/* Carrossel */
+
+.secao-carrossel .carrossel {
+  margin-bottom: 0;
+}
+
+.secao-carrossel .slide {
+  min-height: 230px;
+  padding: 2.5rem;
+  text-align: left;
+}
+
+.slide-numero {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--acento);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.secao-carrossel .slide h2 {
+  margin: 0.5rem 0;
+}
+
+.secao-carrossel .slide p {
+  margin: 0 0 1rem;
+}
+
+.carrossel-controles {
+  gap: 1rem;
+}
+
+.carrossel-controles button {
+  padding: 0.4rem 1rem;
+}
+
+/* Vitrine de livros */
+
+.cartoes-livros {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.cartoes-livros .cartao-livro {
+  padding: 0.85rem;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.cartoes-livros .cartao-livro:hover {
+  transform: translateY(-4px);
+  border-color: var(--borda-forte);
+}
+
+.cartoes-livros .capa {
+  height: 245px;
+  margin-bottom: 1rem;
+}
+
+.livro-informacoes h3 {
+  margin: 0.25rem 0;
+}
+
+.livro-informacoes p {
+  margin: 0.25rem 0;
+}
+
+.livro-avaliacao {
+  color: var(--acento);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* Como funciona */
+
+.secao-como-funciona {
+  margin-top: 4rem;
+  padding: 2rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: var(--painel);
+}
+
+.passos-leitura {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.passo-leitura > span {
+  color: var(--acento);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.passo-leitura h3 {
+  margin: 0.5rem 0;
+}
+
+.passo-leitura p {
+  margin: 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 850px) {
+  .inicio-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .inicio-painel {
+    max-width: none;
+  }
+
+  .cartoes-livros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .inicio-hero {
+    padding-bottom: 2rem;
+  }
+
+  .inicio-texto h1 {
+    font-size: 2rem;
+  }
+
+  .secao-cabecalho {
+    align-items: flex-start;
+  }
+
+  .cartoes-livros {
+    gap: 0.75rem;
+  }
+
+  .cartoes-livros .capa {
+    height: 190px;
+  }
+
+  .passos-leitura {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .secao-como-funciona {
+    padding: 1.25rem;
+  }
+
+  .secao-carrossel .slide {
+    min-height: 220px;
+    padding: 1.5rem;
+  }
+
+  .carrossel-controles {
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================================
+   ESTANTE v4.0 — RESPONSIVIDADE
+   Celulares, tablets e desktops
+   ========================================= */
+
+/* Evita que elementos ultrapassem a tela */
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* TABLETS E TELAS MÉDIAS */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cabecalho {
+    padding: 1rem 1.5rem;
+    align-items: center;
+  }
+
+  .cabecalho nav {
+    width: 100%;
+  }
+
+  .menu {
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .pagina-inicial {
+    padding: 2rem 1.5rem;
+  }
+
+  .inicio-hero {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+  }
+
+  .inicio-texto h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  .inicio-painel {
+    padding: 1.5rem;
+  }
+
+  .cartoes-livros {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .cartoes-livros .capa {
+    height: 220px;
+  }
+
+  .passos-leitura {
+    gap: 1.25rem;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+  /* Cabeçalho e navegação */
+  .cabecalho {
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .cabecalho nav {
+    width: 100%;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .menu li {
+    min-width: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 0.55rem 0.35rem;
+    text-align: center;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+
+  .menu a:hover,
+  .menu a[aria-current="page"] {
+    border-color: var(--acento);
+  }
+
+  .menu button {
+    width: 100%;
+    min-height: 42px;
+    padding: 0.45rem;
+    font-size: 0.9rem;
+  }
+
+  /* Área principal */
+  main.pagina-inicial {
+    padding: 1.5rem 1rem;
+  }
+
+  .inicio-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 1rem 0 2rem;
+  }
+
+  .inicio-texto h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    overflow-wrap: break-word;
+  }
+
+  .inicio-texto > p {
+    font-size: 1rem;
+  }
+
+  .inicio-acoes {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .botao-destaque {
+    text-align: center;
+    min-height: 46px;
+  }
+
+  .link-secundario {
+    text-align: center;
+  }
+
+  .inicio-painel {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .inicio-painel h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Títulos das seções */
+  .secao-carrossel,
+  .secao-livros {
+    margin-top: 1.5rem;
+  }
+
+  .secao-cabecalho {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .secao-cabecalho h2,
+  .secao-como-funciona h2 {
+    font-size: 1.35rem;
+  }
+
+  /* Carrossel */
+  .secao-carrossel .slide {
+    min-height: 210px;
+    padding: 1.25rem;
+  }
+
+  .secao-carrossel .slide h2 {
+    font-size: 1.25rem;
+  }
+
+  .secao-carrossel .slide p {
+    font-size: 0.95rem;
+  }
+
+  .carrossel-controles {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.4rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .carrossel-controles button {
+    min-height: 42px;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  #slide-contador {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  /* Livros */
+  .cartoes-livros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .cartoes-livros .cartao-livro {
+    min-width: 0;
+    padding: 0.65rem;
+  }
+
+  .cartoes-livros .capa {
+    height: clamp(145px, 48vw, 210px);
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .livro-informacoes h3 {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+
+  .livro-informacoes p {
+    font-size: 0.9rem;
+  }
+
+  /* Etapas */
+  .secao-como-funciona {
+    margin-top: 2.5rem;
+    padding: 1.25rem;
+  }
+
+  .passos-leitura {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .passo-leitura {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--borda);
+  }
+
+  .passo-leitura:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  /* Rodapé */
+  .rodape {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .rodape p {
+    margin: 0;
+  }
+
+  .rodape nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+}
+
+/* CELULARES MUITO PEQUENOS */
+@media (max-width: 380px) {
+  main.pagina-inicial {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .menu {
+    gap: 0.35rem;
+  }
+
+  .menu a {
+    font-size: 0.85rem;
+  }
+
+  .cartoes-livros {
+    gap: 0.5rem;
+  }
+
+  .cartoes-livros .cartao-livro {
+    padding: 0.5rem;
+  }
+
+  .cartoes-livros .capa {
+    height: 145px;
+  }
+
+  .carrossel-controles button {
+    font-size: 0.75rem;
+  }
+}
+
+/* Acessibilidade: respeita preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Centraliza e limita a largura do conteúdo na página do livro */
+.livro-detalhe {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.sinopse p,
+.cartao-info p {
+  max-width: 65ch;
+  line-height: 1.6;
+}
+/* Ajusta o espaçamento interno da caixa da sinopse */
+.sinopse {
+  padding: 1.25rem 1.5rem;
+}
+
+/* Remove a margem superior padrão do título h2 que cria o espaço vazio acima dele */
+.sinopse h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Remove a margem inferior extra do parágrafo para não sobrar espaço embaixo */
+.sinopse p {
+  margin-bottom: 0;
 }
