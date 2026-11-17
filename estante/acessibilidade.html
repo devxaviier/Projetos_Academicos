@@ -10,18 +10,18 @@
     <script src="js/usuario.js"></script>
   </head>
   <body>
+    //parte do cabeçalho com logo e menu de navegação.
     <header class="cabecalho">
       <a href="index.html" class="logo">Estante</a>
       <nav aria-label="Navegação principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
-          <li><a href="#">Diário</a></li>
           <li><a href="clubes.html">Clubes</a></li>
           <li><a href="perfil.html">Perfil</a></li>
           <li><a href="#">Listas</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html">Entrar</a></li>
+          <li><a href="login.html" aria-current="page">Entrar</a></li>
           <li><button id="botao-tema" type="button">Modo escuro</button></li>
         </ul>
       </nav>
@@ -63,6 +63,8 @@
           O nível AA exige razão mínima de 4,5:1 para texto normal e 3:1 para
           texto grande e componentes de interface.
         </p>
+
+        //div da tabela de contraste.
         <div class="tabela-wrapper">
           <table>
             <caption>
@@ -167,6 +169,7 @@
         </div>
       </section>
 
+      //sessão do que foi aplicado no site para acessibilidade.
       <section aria-labelledby="titulo-praticas">
         <h2 id="titulo-praticas">O que foi aplicado</h2>
         <ul>

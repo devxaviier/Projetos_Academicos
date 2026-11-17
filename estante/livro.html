@@ -10,23 +10,26 @@
     <script src="js/usuario.js"></script>
   </head>
   <body>
+    //parte do cabeçalho com logo e menu de navegação.
     <header class="cabecalho">
       <a href="index.html" class="logo">Estante</a>
       <nav aria-label="Navegação principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
-          <li><a href="#">Diário</a></li>
           <li><a href="clubes.html">Clubes</a></li>
           <li><a href="perfil.html">Perfil</a></li>
           <li><a href="#">Listas</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html">Entrar</a></li>
+          <li><a href="login.html" aria-current="page">Entrar</a></li>
           <li><button id="botao-tema" type="button">Modo escuro</button></li>
         </ul>
       </nav>
     </header>
 
+    //sessão principal da página, com detalhes do livro, incluindo capa, título,
+    autor, ano, gênero, nota média, botões para marcar como "Quero ler", "Lendo"
+    ou "Lido", sinopse e resenhas de leitores.
     <main>
       <div class="livro-detalhe">
         <div class="capa capa-grande">CAPA GRANDE</div>
@@ -49,12 +52,15 @@
             </p>
           </div>
 
+          //sessão de resenhas de leitores, com título, nota e texto da resenha.
           <div class="botoes">
             <button type="button">Resenhas</button>
             <button type="button">Detalhes</button>
             <button type="button">Listas</button>
           </div>
 
+          //div que contém um cartão de resenha de leitor, com título, nota e
+          texto da resenha.
           <article class="cartao-info">
             <h3>Resenha de leitor</h3>
             <p>Nota ★★★★★ · texto curto da resenha</p>

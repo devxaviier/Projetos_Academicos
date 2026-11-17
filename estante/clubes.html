@@ -10,18 +10,18 @@
     <script src="js/usuario.js"></script>
   </head>
   <body>
+    //parte do cabeçalho com logo e menu de navegação.
     <header class="cabecalho">
       <a href="index.html" class="logo">Estante</a>
       <nav aria-label="Navegação principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
-          <li><a href="#">Diário</a></li>
           <li><a href="clubes.html">Clubes</a></li>
           <li><a href="perfil.html">Perfil</a></li>
           <li><a href="#">Listas</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="login.html">Entrar</a></li>
+          <li><a href="login.html" aria-current="page">Entrar</a></li>
           <li><button id="botao-tema" type="button">Modo escuro</button></li>
         </ul>
       </nav>
@@ -33,6 +33,7 @@
         <p>Encontre o clube mais próximo de você.</p>
       </section>
 
+      //sessão de busca de clubes com filtros por nome/gênero e região.
       <section aria-labelledby="titulo-busca">
         <h2 id="titulo-busca">Buscar clubes</h2>
         <div class="busca">
@@ -48,8 +49,12 @@
           </select>
         </div>
 
+        //parágrafo que mostra a quantidade de clubes encontrados, atualizado
+        dinamicamente.
         <p id="resultado-contagem" role="status">3 clubes encontrados</p>
 
+        //div que contém os cartões de clubes, cada um com informações sobre o
+        clube, como nome, região, gênero e horário de encontros.
         <div class="cartoes" id="lista-clubes">
           <article class="cartao-clube" data-regiao="Asa Norte">
             <div class="capa">IMAGEM</div>
